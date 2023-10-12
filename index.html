@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="button-container">
+            <button class="button" id="sort-button">Sort</button>
+            <button class="button" id="search-button">Search</button>
+            <button class="button" id="pathfind-button">Pathfind</button>
+        </div>
+        <h1 class="header-title">Algorithm Visualizer</h1>
+    </header>
+
+    <!-- ALGO CONTAINER -->
+    <div class="algo-container">
+        <div id="sort-content" style="display: none;">
+            <div class="left-section">
+                <div class="sub-sort-container" id="sort-algorithms">
+                    <ul>
+                        <li>Merge Sort</li>
+                        <li>Quick Sort</li>
+                        <li>Insertion Sort</li>
+                        <li>Selection Sort</li>
+                        <li>Bubble Sort</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="criteria-section">
+                    <label for="elementCount">Number of Elements:</label>
+                    <input type="number" id="elementCount" name="elementCount">
+
+                    <div class="slidecontainer">
+                        <h3>Speed:</h3>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="mySlider">
+                    </div>
+
+                    <div class="controllercontainer">
+                        <button id="playbutton">Play</button>
+                        <button id="pausebutton">Pause</button>
+                        <button id="restartbutton">Restart</button>
+                    </div>
+                </div>
+
+                <div class="algo-box"></div>
+            </div>
+        </div>
+
+
+        <div id="search-content" style="display: none;">
+            <div class="left-section">
+                <div class="sub-search-container" id="search-algorithms">
+                    <ul>
+                        <li>Binary Search</li>
+                        <li>Linear Search</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="criteria-section">
+                    <p>My search criteria</p>
+                </div>
+
+                <div class="algo-box"></div>
+            </div>
+        </div>
+
+
+        <div id="path-content" style="display: none;">
+            <div class="left-section">
+                <div class="sub-path-container" id="path-algorithms">
+                    <ul>
+                        <li>Dijkstras</li>
+                        <li>A*</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="criteria-section">
+                    <p>My search criteria</p>
+                </div>
+
+                <div class="algo-box">
+                    <p>My pathfinding algorithms will be visualized here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
